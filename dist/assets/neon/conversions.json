@@ -1,0 +1,820 @@
+{
+  "workflow": "Complete 113-source coverage: 112 individual original-based image edits using built-in image_gen, plus one benign service-unit replacement atlas (106) generated to its original layout. Outputs exported at original dimensions. Original UVs and source alpha masks retained in renderer.",
+  "assets": [
+    {
+      "source": "../rust/texture-0.png",
+      "output": "texture-0.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Dark insulated black wire surface, desaturated blue-black rubber, preserve narrow horizontal strip and speckled dust.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-f9643a12-01f9-4719-9347-1e7434d3729a.png",
+      "exportCrop": [
+        0,
+        227,
+        2170,
+        499
+      ]
+    },
+    {
+      "source": "../rust/texture-1.png",
+      "output": "texture-1.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Weathered horizontal siding, worn deep petrol teal coating over grey steel; preserve every horizontal plank line and grime mark.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-f2ac26dc-cc47-4df4-ab7e-cce3ff163647.png"
+    },
+    {
+      "source": "../rust/texture-2.png",
+      "output": "texture-2.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Dirt ground converted to charcoal industrial asphalt with embedded aggregate; preserve exact uneven rubble distribution and pits.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-a8a2f973-85ac-4fea-98e5-2eaeb65619a6.png"
+    },
+    {
+      "source": "../rust/texture-3.png",
+      "output": "texture-3.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Grass and rock ground converted to sooty dark urban gravel, muted teal moss; preserve rock positions and sizes.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-68acf265-21df-4d47-9f6e-2e93bcfb7b13.png"
+    },
+    {
+      "source": "../rust/texture-4.png",
+      "output": "texture-4.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Weathered concrete wall, cool charcoal-grey concrete with faded dusty teal paint remnants, same holes, cracks and dirt streaks.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-3fafc107-18d5-4728-96e1-3adc68749fc4.png"
+    },
+    {
+      "source": "../rust/texture-5.png",
+      "output": "texture-5.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Sooty industrial service-yard aggregate floor with existing gravel and worn patches; cool charcoal concrete and subtle oily teal stains.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-29e26f1a-78a4-4232-b8f4-56e0d7c0958c.png"
+    },
+    {
+      "source": "../rust/texture-6.png",
+      "output": "texture-6.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Peeling plaster wall, preserve every peeling paint island. Desaturated petrol teal paint over grey concrete; dusty chipped edges, aged PS2 industrial surface.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-7103731c-8119-4867-bbca-f1974d325ed6.png"
+    },
+    {
+      "source": "../rust/texture-7.png",
+      "output": "texture-7.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same brick wall grid with identical bricks, joints and damage; cool grey composite industrial brick with soot and remnants of faded blue-purple paint.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-d682c1d9-f997-4494-96d5-e3123b71d456.png"
+    },
+    {
+      "source": "../rust/texture-8.png",
+      "output": "texture-8.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same narrow vertical wooden shutter/door, identical slats, two riveted bars and latch. Convert aged wood into battered gunmetal panels with worn teal coating; preserve dark edges and bolts.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-91f35ea2-9e9b-4fc0-a412-24a1799551ea.png"
+    },
+    {
+      "source": "../rust/texture-9.png",
+      "output": "texture-9.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same weathered cargo interior metal sheet, preserve stains, scratches and transparency, cool slate metal with worn teal primer and traces of oxidisation; no new panel seams.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-061a3409-9e96-4c10-b526-ff26df1aed52.png"
+    },
+    {
+      "source": "../rust/texture-10.png",
+      "output": "texture-10.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Cargo interior wall, same streaks and battered metal; darker navy-grey alloy with abraded dusty teal primer, worn texture.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-84869587-c800-47c3-baab-6289fa0a0da6.png"
+    },
+    {
+      "source": "../rust/texture-11.png",
+      "output": "texture-11.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same narrow industrial door with exact window grid, boarded panes, hinges, central plate and rivets. Desaturated violet/charcoal metal with chipped teal trim, preserve geometry and shading.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-99168356-17aa-4603-a65f-2ac1f6367360.png"
+    },
+    {
+      "source": "../rust/texture-12.png",
+      "output": "texture-12.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Double industrial door texture atlas, left/right variants and exact embossed recesses. Weathered dark petrol blue left and cool gunmetal right, chipped paint and grime, no extra controls.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-6f31f230-3e04-4cc2-a1ef-27cd80d75af8.png"
+    },
+    {
+      "source": "../rust/texture-13.png",
+      "output": "texture-13.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Tileable rusted plain steel, same dense fine oxidisation pattern. Blue-grey oxidised steel under worn dark teal coat, subtle surviving rust; no panels added.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-e1714d15-b14e-42c1-8853-2f000bc7f316.png"
+    },
+    {
+      "source": "../rust/texture-14.png",
+      "output": "texture-14.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same thin horizontal plank pattern, exact seams and knots; reinterpret as battered dark composite decking with cool slate and teal pigment rubbed into grain. Keep coarse PS2 visual texture.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-0c06edaf-55b4-4632-a32e-0771c7d72147.png"
+    },
+    {
+      "source": "../rust/texture-15.png",
+      "output": "texture-15.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same cliff rock face, exact horizontal stratification, fissures, highlights and shadows. Cool charcoal basalt with grey-blue highlights and slight industrial soot, remove desert brown.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-7d9f2086-58bc-42eb-841b-15d3437ed441.png"
+    },
+    {
+      "source": "../rust/texture-16.png",
+      "output": "texture-16.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same cracked concrete wall with identical top drainage stains and crumbling lower corners; grey-blue industrial concrete with dusty faded teal pigment and soot, retain high detail dirt.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-cb9130d6-1a5b-41b1-953c-c99a1365aa27.png"
+    },
+    {
+      "source": "../rust/texture-17.png",
+      "output": "texture-17.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same plain weathered woodboard grain, scars and stains, repurpose as aged grey composite sheet with faint dirty violet/teal finish. Keep no added divisions.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-69c375ab-de8c-46c0-a205-686482c3e4f6.png"
+    },
+    {
+      "source": "../rust/texture-18.png",
+      "output": "texture-18.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same cracked painted plaster, exact fine crack network and horizontal scuff bands. Faded teal-grey industrial wall with chipped pale grey and soot stains; remove sandy cream but preserve readable lightness.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-150788da-4e10-46a4-83d3-153eb1dfa66a.png"
+    },
+    {
+      "source": "../rust/texture-19.png",
+      "output": "texture-19.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same large rust metal mottled pattern, deep gunmetal grey base with distressed muted violet coating and old copper corrosion; no new seams or fixtures.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-c6f80807-cf9c-4af2-942a-0249e3d74d4c.png"
+    },
+    {
+      "source": "../rust/texture-20.png",
+      "output": "texture-20.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same cracked soil pattern becomes worn charcoal asphalt paving, preserve cracks and eroded patches pixel location. Industrial tarmac aggregate, cool grey dust, no yellow sand.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-b7363ce5-77f6-494a-9dbf-d7a5f1b8a903.png"
+    },
+    {
+      "source": "../rust/texture-21.png",
+      "output": "texture-21.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same subtle fine sand pattern becomes a dusty grey urban industrial concrete floor, cool charcoal medium grey with sparse dark grit, no new cracks, markings or seams. Preserve restrained fine surface grain and slight natural mottling.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-c4754371-81d4-49fb-accc-dc7815f4a723.png"
+    },
+    {
+      "source": "../rust/texture-22.png",
+      "output": "texture-22.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same scattered isolated pebbles, preserve every pebble silhouette and placement on genuine transparent background. Recolor stones cool charcoal and grey-blue concrete rubble for futuristic industrial yard. Preserve no surface behind pebbles.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-5b29fcc1-1540-41d5-8eb8-8219aa72b400.png"
+    },
+    {
+      "source": "../rust/texture-23.png",
+      "output": "texture-23.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same mottled dirt pattern becomes worn dark slate concrete with blackened grime, cracked aggregate, subtle desaturated blue-grey patches; no added seams or graphic elements.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-762c5704-03ae-406b-98d5-cd044665d9f0.png"
+    },
+    {
+      "source": "../rust/texture-24.png",
+      "output": "texture-24.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same shipping container double-door UV texture, exact frame, dividing line and label positions. Weathered dark teal/navy painted steel, pale cyan faded stencils, muted amber safety label accents, gritty old-console detail. Preserve small printed warning labels as shapes, no new logos.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-ec7589f5-3bb0-4663-8256-e3268c6cc3f5.png"
+    },
+    {
+      "source": "../rust/texture-25.png",
+      "output": "cargo-wall.png",
+      "prompt": "Edit this exact game diffuse texture, not a scene or a model. Convert the original weathered off-white cargo-container wall to a gritty early-2000s PS2/Xbox cyberpunk cargo-container texture. Keep the exact orthographic UV layout, same number and location of vertical ribs, same top dark lip, same rust drips, scratches, chips and dirt. Change painted areas to faded petrol teal/blue-grey, exposed rust remains muted brown, steel dark grey. Add only a few small faded pale-cyan industrial paint marks within existing flat ribs, not glowing strips. Preserve original realism, baked shading and low-resolution game texture character. No new seams, no added border, no extra objects, no perspective, no text or logo, no bright bloom, no smooth plastic, no generic procedural noise. Entire square image is the original texture, suitable for reuse with exactly the original UVs. Do not redesign the surface; retain original detail."
+    },
+    {
+      "source": "../rust/texture-26.png",
+      "output": "texture-26.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Exact rock surface fissure network, especially diagonal crack lower-right. Reinterpret brown stone as cool charcoal basalt/concrete rubble, blue-grey grey highlights, sooty cracks.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-3c2f644e-91b1-424d-897b-afa9466e9be0.png"
+    },
+    {
+      "source": "../rust/texture-27.png",
+      "output": "texture-27.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same rock surface, large pale central eroded patch and darker mottled edges. Desaturated slate/blue-grey stone with black industrial soot, no desert gold/brown.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-af948c4a-87f0-471d-9c6d-451597d465aa.png"
+    },
+    {
+      "source": "../rust/texture-28.png",
+      "output": "texture-28.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same precise diagonal diamond tread grid and spacing, worn cool gunmetal steel tread plate with teal remnants between raised polished grey tread ridges, gritty oily stains.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-f1422782-49d6-446d-aebc-868dd3efaae6.png"
+    },
+    {
+      "source": "../rust/texture-29.png",
+      "output": "texture-29.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same uneven plastered concrete, fine scratches and soft shallow dents. Aged blue-grey concrete with faint desaturated teal paint wear, readable midtone, rough and dirty.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-4d3623cd-bf10-4413-afe3-abf920e21753.png"
+    },
+    {
+      "source": "../rust/texture-30.png",
+      "output": "texture-30.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same small uneven masonry blocks exact grid and mortar, reinterpret as cool grey urban industrial retaining wall, faded slate blue paint fragments and sooty mortar. No added signage or seams.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-fc3e0c28-4d04-44a7-9440-1960b72469f7.png"
+    },
+    {
+      "source": "../rust/texture-31.png",
+      "output": "texture-31.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Extremely wide 16:1 riveted metal trim strip. Preserve exact rivet placement and horizontal seams. Dark gunmetal rail with faded chipped petrol teal finish, scuffs and grey bolt heads. Single thin full-width strip; no framing or extra objects; maintain16:1 aspect ratio.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-17ea1903-bddc-4866-8d77-f2d39682fa5d.png",
+      "exportCrop": [
+        0,
+        284,
+        2170,
+        410
+      ]
+    },
+    {
+      "source": "../rust/texture-32.png",
+      "output": "texture-32.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same vertical corrugated siding, identical rib spacing and rust streaks, weathered dark petrol teal and charcoal steel with grey exposed scratches, medium brightness for readability. Preserve original surface layout.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-9fb098a1-8bc5-446b-897d-8a082f863487.png"
+    },
+    {
+      "source": "../rust/texture-33.png",
+      "output": "tower-steel.png",
+      "prompt": "Edit this exact rusty painted-steel diffuse texture for an early-2000s PS2/Xbox cyberpunk industrial tower. Keep the original pixel composition, size and distribution of large rust patches, chips, peeling areas, scratches and vertical runoff. Repaint only the surviving pale paint to muted cool blue-grey/steel teal; rust should remain dark reddish brown, not become blue. Preserve the recognizable original surface, realistic baked grime and rough diffuse character. This is a flat square repeating game texture, no scene, no perspective, no directional relighting, no new panel borders, no seams, no vents, no symbols, no text, no neon lines, no smooth synthetic material. Existing UVs will be used exactly. Retain the sparse pale paint at the top and left and the heavy dark rust in the centre and lower area. Keep subtle varied contrast, not a black surface."
+    },
+    {
+      "source": "../rust/texture-34.png",
+      "output": "texture-34.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same plain rusty factory floor diffuse surface, cool oxidised gunmetal and worn muted violet paint, dense mottled abrasion and oily stains; preserve exact texture composition and existing alpha.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-c8ea4467-dd85-4ca9-8120-7999b439703a.png"
+    },
+    {
+      "source": "../rust/texture-35.png",
+      "output": "texture-35.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same exact square floor grating grid and openings, preserve bar width, grid spacing and transparency. Worn dark gunmetal grid with chipped teal coating and pale grey scuffs, original baked shading, no extra bars or framing.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-5eeddde6-d355-4570-94b9-931a233a9cb2.png"
+    },
+    {
+      "source": "../rust/texture-36.png",
+      "output": "texture-36.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Same vegetation facade cutout atlas, exact two long bands of foliage and every silhouette. Recolor as sooty desaturated blue-green urban foliage with dusty grey teal leaves; retain original layout and true transparency.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-aa5b3d8e-c4a4-4386-875e-449797e9cfd6.png"
+    },
+    {
+      "source": "../rust/texture-37.png",
+      "output": "texture-37.png",
+      "prompt": "Use case: style-transfer. Asset type: diffuse game texture for gritty PS2/original Xbox cyberpunk FPS. EDIT TARGET is the supplied original texture, not a scene. Preserve exact UV layout, composition, seams, panel positions, baked shadows, wear and surface pattern so it fits the existing model identically. Reinterpret its material only with worn futuristic industrial palette, low-resolution dirty realism. No new objects, no arbitrary neon stripes, no smooth vector graphics, no gloss, no text, no borders. Full-bleed flat texture map, original aspect ratio. Exact dense rubble/pebble arrangement, same size and positions and shading. Cool grey slate rubble and blue-grey metal-like mineral stones, charcoal dirty aggregate between them, gritty realistic old-console industrial ground.",
+      "method": "built-in imagegen original-based edit",
+      "generated": "exec-4dd292dd-4745-4902-b292-70de7a21d01a.png"
+    },
+    {
+      "source": "../rust/texture-38.png",
+      "output": "texture-38.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this water: shift water towards polluted cool petrol-teal while keeping the exact existing ripples, waves, and shadows. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-fa65a81a-63ed-4dd3-8719-593a43cbd0cc.png"
+    },
+    {
+      "source": "../rust/texture-39.png",
+      "output": "texture-39.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this cracked dirt: convert to cold charcoal urban industrial grime, retaining every cracked-earth fissure and original roughness. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-0ff630f1-bab0-4946-90ee-6d37886ff5a2.png"
+    },
+    {
+      "source": "../rust/texture-40.png",
+      "output": "texture-40.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this river stain decal: change mossy warm green/brown towards dirty cool teal algae and blue-black runoff, retaining exact stain silhouette, drips and negative space. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Preserve all original transparent regions and output genuine transparency.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-7b014f99-9cac-46b7-84d2-7c52ba609642.png"
+    },
+    {
+      "source": "../rust/texture-41.png",
+      "output": "texture-41.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this chainlink fence: cooler dark oxidized gunmetal links with modest teal tarnish. Retain the exact diamond wire pattern and original gaps. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Preserve all original transparent regions and output genuine transparency.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-a529b21f-2d61-40c2-9e69-81c0a635ec3e.png"
+    },
+    {
+      "source": "../rust/texture-42.png",
+      "output": "texture-42.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this factory rust stain decal: dirty desaturated blue-grey paint traces with dark teal oxidation mixed into original rust. Retain exact decal silhouette and stains. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Preserve all original transparent regions and output genuine transparency.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-4377b127-32fc-4489-b36b-c85e0df29d64.png"
+    },
+    {
+      "source": "../rust/texture-43.png",
+      "output": "texture-43.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this cracked dirt and gravel: muted graphite grey and brown urban rubble with cool teal shadows. Retain all original cracks, stones and dirty patches. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat opaque texture.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-ed7a264d-8f2a-415a-8643-b658d821765d.png"
+    },
+    {
+      "source": "../rust/texture-44.png",
+      "output": "texture-44.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this dirt and grass: cool grey urban dust with muted cold-green/teal weeds. Retain every individual grass clump and exact bare ground pattern. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-d2d76a5f-b822-4668-86b6-1ad935be1386.png"
+    },
+    {
+      "source": "../rust/texture-45.png",
+      "output": "texture-45.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this rough dirt wall: cold charcoal mineral rubble with faint teal grime, keep existing horizontal erosion bands, stones, shadows and highlights. Preserve 2:1 wide aspect ratio. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-f64420d0-9657-4c66-95dd-045231af999d.png"
+    },
+    {
+      "source": "../rust/texture-46.png",
+      "output": "texture-46.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this fine dirt: cool grey-blue industrial dust and grime, keep original shallow cracks and subtle roughness, no added pattern. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-5d763b21-a767-40c7-8933-79c9325d4130.png"
+    },
+    {
+      "source": "../rust/texture-47.png",
+      "output": "texture-47.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this cracked peeling plaster: worn desaturated petrol-blue/grey industrial paint with pale chipped areas, preserve the exact existing paint flakes and cracks. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-5f366d98-197e-4818-b685-1df9a8625e53.png"
+    },
+    {
+      "source": "../rust/texture-48.png",
+      "output": "texture-48.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this flat cracked stone: cool slate-grey industrial mineral face with subtle teal dirt in crevices; keep exact existing large facets and every fracture. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-a5987424-4d4d-4c6c-a4b1-005581d972bd.png"
+    },
+    {
+      "source": "../rust/texture-49.png",
+      "output": "texture-49.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this rough rock rubble: cold slate-blue/grey stone, dark teal damp algae in original stained patches; keep every rock edge and original shadow. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-92d558ab-a560-4e5a-85ae-cf536e6c31c7.png"
+    },
+    {
+      "source": "../rust/texture-50.png",
+      "output": "texture-50.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this blocky cliff rock: cool graphite grey with teal-dark crevices; preserve every block and fracture exactly. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-909e4d1f-d49b-4df7-8904-306fa8af0735.png"
+    },
+    {
+      "source": "../rust/texture-51.png",
+      "output": "texture-51.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this vertical algae grime decal: blue-grey dusty surface and dark petrol-teal runoff in exact original drip positions; keep exact boundaries and alpha. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Preserve all original transparent regions and output genuine transparency.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-25337d9a-c417-4139-9c59-291878c7bc80.png"
+    },
+    {
+      "source": "../rust/texture-52.png",
+      "output": "texture-52.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this oily leak decal: polluted blue-black oil with restrained cyan/violet iridescence. Preserve original oil silhouette, stains and transparency, no added objects. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Preserve all original transparent regions and output genuine transparency.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-b08b9c7c-6ab5-4c04-8ea0-e3ab595bd475.png"
+    },
+    {
+      "source": "../rust/texture-53.png",
+      "output": "texture-53.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this oil stain decal: blue-black petroleum with restrained teal/violet iridescence. Preserve exact stain lobes, shape, transparency and internal detail. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Preserve all original transparent regions and output genuine transparency.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-8bcb1050-5fc6-49a0-be1c-f1d7b822a022.png"
+    },
+    {
+      "source": "../rust/texture-54.png",
+      "output": "texture-54.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this water foam: shift water under original foam to dark polluted teal with pale cool-grey foam. Preserve every original wave and foam ridge exactly, including transparency. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Preserve all original transparent regions and output genuine transparency.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-cc075fa6-feaf-40ba-84ac-41928dbe39e1.png"
+    },
+    {
+      "source": "../rust/texture-55.png",
+      "output": "texture-55.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this rust grime decal: blue-black corrosion and dirty muted teal oxidation mixed with some dark original rust. Keep exact faded stain boundary and original wear. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Preserve all original transparent regions and output genuine transparency.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-25f5513d-0c8a-4fce-bf35-7b51b7b0c552.png"
+    },
+    {
+      "source": "../rust/texture-56.png",
+      "output": "texture-56.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this shrub atlas: subdued cold grey-green/teal branches and leaves, dirty bark. Preserve EVERY branch, frond, UV island and transparent gap, no additional leaves, no glow. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Preserve all original transparent regions and output genuine transparency.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-e889b0f1-ecae-4785-8356-a4b18c274144.png"
+    },
+    {
+      "source": "../rust/texture-57.png",
+      "output": "texture-57.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this tree trunk bark: cool charcoal bark and desaturated teal-damp grime at original base. Preserve every bark cut and diagonal fibrous line, 1:2 portrait layout. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-38c825b7-6f57-4d3e-82c4-7ff1fe610957.png"
+    },
+    {
+      "source": "../rust/texture-58.png",
+      "output": "texture-58.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this tree trunk bark: cool charcoal-grey bark with subtle muted blue-green grime. Preserve every bark cut and diagonal fibrous line, 1:2 portrait layout. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-b586740f-babc-4007-99a8-a49744acfce9.png"
+    },
+    {
+      "source": "../rust/texture-59.png",
+      "output": "texture-59.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this tree trunk bark: cool grey bark with desaturated teal-damp fibers. Preserve every bark cut, sawtooth pattern at top and diagonal fibrous line, 1:2 portrait layout. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-f2bd2321-ce5c-4587-8ce9-af0368afd92a.png"
+    },
+    {
+      "source": "../rust/texture-60.png",
+      "output": "texture-60.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this plant atlas with three long leaves and flower stems: muted cold green/teal leaves, pale dusty blue-white flowers. Preserve all exact stems, leaves, petals, UV islands and transparent regions. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Preserve all original transparent regions and output genuine transparency.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-2fd3f800-9066-4fe4-a350-02f9c2bb792c.png"
+    },
+    {
+      "source": "../rust/texture-61.png",
+      "output": "texture-61.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this hedge/tree foliage atlas: muted cold green/teal leaves with charcoal grey woody branches. Preserve each exact bush silhouette, branch placement, UV island and transparency. 2:1 landscape. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Preserve all original transparent regions and output genuine transparency.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-5d38f88b-5d60-4b3a-9260-6c9037e48850.png"
+    },
+    {
+      "source": "../rust/texture-62.png",
+      "output": "texture-62.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this tree twig and bark atlas: muted cold green/teal leaves and charcoal bark. Preserve twig and branch silhouettes on left, bark panel on right, all UV islands exactly. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Preserve all original transparent regions and output genuine transparency.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-dbd33f9d-7079-4ee2-b0de-809f66c14745.png"
+    },
+    {
+      "source": "../rust/texture-63.png",
+      "output": "texture-63.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this grass atlas: subdued cool teal-green grass. Preserve exact grass clump shapes and original gap/background opacity structure, no additional blades. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Preserve all original transparent regions and output genuine transparency.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-a914bbdd-8b1d-4a08-ad8c-f8e877589729.png"
+    },
+    {
+      "source": "../rust/texture-64.png",
+      "output": "texture-64.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this tiny plain grey material swatch: shift to cool dark desaturated blue-grey, retaining flat subtle original mottled detail. No added details or patterns. It will be downsampled to 16x16. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-0c79e77c-ad51-49ce-978d-a8847e03206b.png"
+    },
+    {
+      "source": "../rust/texture-65.png",
+      "output": "texture-65.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this destroyed truck cab UV atlas: repaint ONLY existing light body panels as weathered muted petrol-teal and charcoal sci-fi industrial paint. Keep black windows, tires, wheels, grille, every bolt and all exact UV islands in same positions. Keep dents, scorch, rust, chipped paint and baked shading. No new panel seams or parts. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-cf9e4d7d-ccc1-4c93-acb3-e70079ffd9ca.png"
+    },
+    {
+      "source": "../rust/texture-66.png",
+      "output": "texture-66.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this destroyed trailer UV atlas: repaint ONLY existing orange body panels as weathered desaturated petrol-teal industrial paint and dark charcoal chassis. Retain all exact UV islands, rivets, rust patches, chipped paint and baked shading. 2:1 landscape. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-fd084e10-5c97-47d3-a393-55372448aec0.png"
+    },
+    {
+      "source": "../rust/texture-67.png",
+      "output": "texture-67.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this destroyed police vehicle interior UV atlas: cool charcoal-grey worn upholstery and gunmetal dashboard, muted teal traces on existing display/control surfaces only. Retain exact seats, windows, steering wheel, door panels, electronics, holes and every UV island. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-e4fcac89-9599-486d-8d0e-60760b21772e.png"
+    },
+    {
+      "source": "../rust/texture-68.png",
+      "output": "texture-68.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this engine UV atlas: cool dark gunmetal engine and blue-grey old metal housing with teal oxidation in original dirty patches. Preserve all pipe positions, fan, radiator fins, panels, wheels and other exact UV islands with worn detail. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-50befa8d-a6b6-4bd4-bd46-47cda3f6b690.png"
+    },
+    {
+      "source": "../rust/texture-69.png",
+      "output": "texture-69.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this destroyed military truck UV atlas: repaint original light body panels in weathered muted petrol-teal with charcoal mechanical parts. Preserve every original island, window, wheel, rivet, scorch and chip, no added objects. 2:1 landscape. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-0ae04253-b8d1-4ccd-bd99-b6594393c74b.png"
+    },
+    {
+      "source": "../rust/texture-70.png",
+      "output": "corrugated-metal.png",
+      "prompt": "Edit this original corrugated-metal game diffuse texture in place for a gritty PS2/Xbox-era cyberpunk industrial map. Strictly preserve the original vertical corrugation spacing, exact ridges and valleys, baked shadows, peeling surfaces, scratches and rust distribution so it works on the original UVs. Repaint the existing surviving paint a faded desaturated blue-grey / petrol teal, retain dark oxidised steel and subdued brown rust. Very subtle pale cyan remnants of old paint only; no neon strips, logos, text, new panel shapes, added border, perspective or new geometry. Entire square is a flat game texture with original photographic low-resolution grungy character. Keep the material recognisably the same original corrugated sheet, only adapt its finish and palette. No smooth plastic, no noise overlay, no dramatic lighting."
+    },
+    {
+      "source": "../rust/texture-71.png",
+      "output": "texture-71.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this palm atlas: cool charcoal bark panel at left, muted desaturated cold teal-green fronds at right. Preserve precise UV panel boundary, every original frond silhouette and transparent gap. 2:1 landscape. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Preserve all original transparent regions and output genuine transparency.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-a065ea83-2e8d-434e-8c37-392795d9a937.png"
+    },
+    {
+      "source": "../rust/texture-72.png",
+      "output": "texture-72.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this military tire atlas: cool charcoal rubber with desaturated blue-grey worn edges and dirty teal-tinted dust in existing crevices. Preserve the exact tread pattern, tyre circles, dividing line, flat UV layout. 2:1 landscape. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-b44ef66d-9e2e-435d-80b7-f8e30b3cf728.png"
+    },
+    {
+      "source": "../rust/texture-73.png",
+      "output": "texture-73.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this narrow antenna metal strip: weathered dark petrol-teal industrial paint with original grey metal chips, scratches and screw holes. Preserve all exact features and proportions in narrow 1:4 atlas. No new seams or neon. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export crops generation black side padding then resizes to exact original dimensions",
+      "generated": "exec-71888339-8f56-46a3-9036-55c729100c3b.png",
+      "exportCrop": [
+        90,
+        0,
+        635,
+        2170
+      ]
+    },
+    {
+      "source": "../rust/texture-74.png",
+      "output": "texture-74.png",
+      "prompt": "Use case: style-transfer. Edit target: supplied original game texture. Asset: gritty PS2/original Xbox era cyberpunk industrial FPS texture. Change ONLY the surface palette and paint treatment of this damaged concrete barrier face: weathered cool graphite concrete with faded desaturated blue-grey industrial paint. Preserve every existing crack, gouge, two rust streaks, aggregate patch and chipped edge. No new markings. Preserve exact UV layout, feature positions, baked light/shade, borders and tiling. Keep aged low-resolution bitmap detail. NO new panels, new geometry, neon stripes, signs, text, lighting effects, perspective, generic noise or smooth clean vector surfaces. Output same aspect ratio, full-frame flat texture. Keep opaque.",
+      "method": "built-in image_gen original-image edit; Pillow export resize only",
+      "generated": "exec-af4af09b-3d21-4974-a581-c485c3b534ca.png"
+    },
+    {
+      "source": "../rust/texture-75.png",
+      "output": "texture-75.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET: the attached original UV texture mtl_cargocontainerlockingbar (64x256 pixels). Convert THIS original into gritty early-2000s PS2/Xbox cyberpunk industrial artwork. Keep exact composition, proportions, every UV island boundary, seam, bolt, scratches, baked shading, holes, and texture detail placement. Change only surface color/material finish: weathered dark cool charcoal steel with faded petrol teal paint, restrained cyan accents ONLY in existing display areas, worn amber markings where existing markings are. Preserve soot/rust grime and visible roughness. Glass becomes dirty smoky teal. No large neon stripes or invented panels or objects, no smooth plastic, no polished 3D render, no perspective, no captions. Flat texture image, same original aspect ratio and full edge-to-edge layout. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-5129a582-e242-45e3-863f-5c7fed9aabda.png",
+      "exportCrop": [
+        88,
+        0,
+        638,
+        2170
+      ]
+    },
+    {
+      "source": "../rust/texture-76.png",
+      "output": "texture-76.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET: the attached original UV texture mtl_cargocontainerdoorhinge_white (64x64 pixels). Convert THIS original into gritty early-2000s PS2/Xbox cyberpunk industrial artwork. Keep exact composition, proportions, every UV island boundary, seam, bolt, scratches, baked shading, holes, and texture detail placement. Change only surface color/material finish: weathered dark cool charcoal steel with faded petrol teal paint, restrained cyan accents ONLY in existing display areas, worn amber markings where existing markings are. Preserve soot/rust grime and visible roughness. Glass becomes dirty smoky teal. No large neon stripes or invented panels or objects, no smooth plastic, no polished 3D render, no perspective, no captions. Flat texture image, same original aspect ratio and full edge-to-edge layout. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-2d8155cc-91a8-48b4-b72a-785b0aa287ff.png"
+    },
+    {
+      "source": "../rust/texture-77.png",
+      "output": "texture-77.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET: the attached original UV texture mtl_ch_gas_pump (256x256 pixels). Convert THIS original into gritty early-2000s PS2/Xbox cyberpunk industrial artwork. Keep exact composition, proportions, every UV island boundary, seam, bolt, scratches, baked shading, holes, and texture detail placement. Change only surface color/material finish: weathered dark cool charcoal steel with faded petrol teal paint, restrained cyan accents ONLY in existing display areas, worn amber markings where existing markings are. Preserve soot/rust grime and visible roughness. Glass becomes dirty smoky teal. No large neon stripes or invented panels or objects, no smooth plastic, no polished 3D render, no perspective, no captions. Flat texture image, same original aspect ratio and full edge-to-edge layout. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-7d1908d7-4652-45f2-91bf-f52d479ae9d6.png"
+    },
+    {
+      "source": "../rust/texture-78.png",
+      "output": "texture-78.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET: the attached original UV texture mtl_ch_gas_pump_glass (64x64 pixels). Convert THIS original into gritty early-2000s PS2/Xbox cyberpunk industrial artwork. Keep exact composition, proportions, every UV island boundary, seam, bolt, scratches, baked shading, holes, and texture detail placement. Change only surface color/material finish: weathered dark cool charcoal steel with faded petrol teal paint, restrained cyan accents ONLY in existing display areas, worn amber markings where existing markings are. Preserve soot/rust grime and visible roughness. Glass becomes dirty smoky teal. No large neon stripes or invented panels or objects, no smooth plastic, no polished 3D render, no perspective, no captions. Flat texture image, same original aspect ratio and full edge-to-edge layout. Preserve original transparent regions and cutouts exactly; real alpha background.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-7dc64bd7-76cf-4c8f-ba9b-440446adfa54.png"
+    },
+    {
+      "source": "../rust/texture-79.png",
+      "output": "texture-79.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET: the attached original UV texture mtl_barrel_fire (256x256 pixels). Convert THIS original into gritty early-2000s PS2/Xbox cyberpunk industrial artwork. Keep exact composition, proportions, every UV island boundary, seam, bolt, scratches, baked shading, holes, and texture detail placement. Change only surface color/material finish: weathered dark cool charcoal steel with faded petrol teal paint, restrained cyan accents ONLY in existing display areas, worn amber markings where existing markings are. Preserve soot/rust grime and visible roughness. Glass becomes dirty smoky teal. No large neon stripes or invented panels or objects, no smooth plastic, no polished 3D render, no perspective, no captions. Flat texture image, same original aspect ratio and full edge-to-edge layout. Preserve original transparent regions and cutouts exactly; real alpha background.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-0be96233-ba84-4384-8487-aee8a421053d.png"
+    },
+    {
+      "source": "../rust/texture-80.png",
+      "output": "texture-80.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET original UV texture mtl_burnt_wood. Charred wood becomes dark cool charcoal burned composite timber, preserve every char crack. Gritty early-2000s PS2/Xbox cyberpunk texture with baked wear and muted colors. Keep exact original full-frame layout, aspect ratio 256:128, UV island boundaries, seams, scratches and shading. Only recolor existing surfaces; do NOT invent seams, geometry, symbols, neon stripes or text. Flat texture image, no perspective, no borders, full bleed all the way to image edges. No modern smoothness. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-8b02c7f6-bced-426e-ad5a-86ebe4faf127.png"
+    },
+    {
+      "source": "../rust/texture-81.png",
+      "output": "texture-81.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET original UV texture mtl_gas_pipes. Gas pipe UV atlas: preserve every rectangle and label; oxidized bluegray steel and worn petrol teal coatings. Gritty early-2000s PS2/Xbox cyberpunk texture with baked wear and muted colors. Keep exact original full-frame layout, aspect ratio 256:256, UV island boundaries, seams, scratches and shading. Only recolor existing surfaces; do NOT invent seams, geometry, symbols, neon stripes or text. Flat texture image, no perspective, no borders, full bleed all the way to image edges. No modern smoothness. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-12f48a47-9c6f-4096-953a-a53fcc331c7b.png"
+    },
+    {
+      "source": "../rust/texture-82.png",
+      "output": "texture-82.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET original UV texture mtl_rustybolt. Rusty bolt atlas: dark cool oxidised metal, retain threaded strip at bottom. Gritty early-2000s PS2/Xbox cyberpunk texture with baked wear and muted colors. Keep exact original full-frame layout, aspect ratio 128:256, UV island boundaries, seams, scratches and shading. Only recolor existing surfaces; do NOT invent seams, geometry, symbols, neon stripes or text. Flat texture image, no perspective, no borders, full bleed all the way to image edges. No modern smoothness. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-58406337-8d8c-4753-a009-d3cfa1e468e8.png"
+    },
+    {
+      "source": "../rust/texture-83.png",
+      "output": "texture-83.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET original UV texture mtl_misc_literock_small01. Rock becomes cool slate-blue polluted urban rock, no metal panels, preserve all mineral fractures. Gritty early-2000s PS2/Xbox cyberpunk texture with baked wear and muted colors. Keep exact original full-frame layout, aspect ratio 256:256, UV island boundaries, seams, scratches and shading. Only recolor existing surfaces; do NOT invent seams, geometry, symbols, neon stripes or text. Flat texture image, no perspective, no borders, full bleed all the way to image edges. No modern smoothness. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-cddf154e-7a25-41f3-bb49-39fd3e421930.png"
+    },
+    {
+      "source": "../rust/texture-84.png",
+      "output": "texture-84.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET original UV texture mtl_light_sticks_off. Unlit light stick atlas: smoked petrol teal translucent plastic, no glow or new shapes. Gritty early-2000s PS2/Xbox cyberpunk texture with baked wear and muted colors. Keep exact original full-frame layout, aspect ratio 128:128, UV island boundaries, seams, scratches and shading. Only recolor existing surfaces; do NOT invent seams, geometry, symbols, neon stripes or text. Flat texture image, no perspective, no borders, full bleed all the way to image edges. No modern smoothness. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-476dee14-9a1e-4337-805f-929c996f6942.png"
+    },
+    {
+      "source": "../rust/texture-85.png",
+      "output": "texture-85.png",
+      "prompt": "Original-based PS2 cyberpunk recolor; preserve exact UV atlas layout and all existing parts, rough wear and soot, dark charcoal petrol teal coating.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-ee258c92-2bae-469d-9794-bbdffa308836.png"
+    },
+    {
+      "source": "../rust/texture-86.png",
+      "output": "texture-86.png",
+      "prompt": "Original-based PS2 cyberpunk recolor; preserve exact UV atlas layout and all existing parts, rough wear and soot, dark charcoal petrol teal coating.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-6a4dd45d-75bf-4d23-8110-b8d8635a76fc.png"
+    },
+    {
+      "source": "../rust/texture-87.png",
+      "output": "texture-87.png",
+      "prompt": "Original-based PS2 cyberpunk recolor; preserve exact UV atlas layout and all existing parts, rough wear and soot, dark charcoal petrol teal coating.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-649f40a2-f0bc-4999-8805-ca9c5db62f71.png"
+    },
+    {
+      "source": "../rust/texture-88.png",
+      "output": "texture-88.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET the supplied original texture. Sparse flat scratched letter stencils and tiny markings on transparent background. Inanimate surface decal only. Recolor existing lettering dull pale cyan and existing small warning marks amber. Preserve every marking's position and transparency; no new symbols or artwork. Gritty PS2/Xbox-era cyberpunk game surface, retain all original wear, grain and baked shading. Exact original UV layout and aspect ratio 256:64. Flat edge-to-edge texture, no borders, no scene, no objects added, no perspective, no new panel boundaries. Preserve existing alpha regions exactly.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-4fb4fd42-8887-4524-b4d1-e4df7ae066a1.png"
+    },
+    {
+      "source": "../rust/texture-89.png",
+      "output": "texture-89.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET the supplied original texture. Flat UV texture sheet of a metal utility canister, faded teal coating and oxidized charcoal metal. Retain all existing X-shaped indentations and handles in their exact positions. Gritty PS2/Xbox-era cyberpunk game surface, retain all original wear, grain and baked shading. Exact original UV layout and aspect ratio 256:256. Flat edge-to-edge texture, no borders, no scene, no objects added, no perspective, no new panel boundaries. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-4ba20cb9-d80b-489e-aee1-dadc9a48a8ec.png"
+    },
+    {
+      "source": "../rust/texture-90.png",
+      "output": "texture-90.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET the supplied original texture. Flat rubber boat material UV atlas. Recolor existing material dark charcoal, subtle petrol teal worn patches. Keep all UV parts, seams, grips and folded cloth exact. Gritty PS2/Xbox-era cyberpunk game surface, retain all original wear, grain and baked shading. Exact original UV layout and aspect ratio 256:256. Flat edge-to-edge texture, no borders, no scene, no objects added, no perspective, no new panel boundaries. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-75b06f71-15b4-4f26-9ceb-ed9d54c3d933.png"
+    },
+    {
+      "source": "../rust/texture-91.png",
+      "output": "texture-91.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET the supplied original texture. Woven industrial mesh texture, same woven thread pattern and outline. Change threads from black to cool graphite with muted teal fibers; no metal panels. Gritty PS2/Xbox-era cyberpunk game surface, retain all original wear, grain and baked shading. Exact original UV layout and aspect ratio 256:256. Flat edge-to-edge texture, no borders, no scene, no objects added, no perspective, no new panel boundaries. Preserve existing alpha regions exactly.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-951b509c-39ed-4137-bd38-289280007a5d.png"
+    },
+    {
+      "source": "../rust/texture-92.png",
+      "output": "texture-92.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET the supplied original texture. Flat industrial cylindrical utility tank UV texture. Weathered pale cool steel and faded petroleum blue coating, preserve original seam placements and circular endcap on left. Gritty PS2/Xbox-era cyberpunk game surface, retain all original wear, grain and baked shading. Exact original UV layout and aspect ratio 256:128. Flat edge-to-edge texture, no borders, no scene, no objects added, no perspective, no new panel boundaries. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-20fe1391-032a-4b1d-849d-521a958eb509.png"
+    },
+    {
+      "source": "../rust/texture-93.png",
+      "output": "texture-93.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET original mtl_pipes_rusted flat texture. Rusted pipe metal atlas: keep long seam midway, oval part at right and all original panels exact. Cool dark oxidized steel with faded petroleum teal and subtle muted violet stains. Gritty PS2/Xbox-era cyberpunk game surface; retain original detail density and weathering, not smooth. Exact original UV layout and aspect ratio 256:256. Full image texture edge-to-edge, no border, no render, no scene, no objects added, no new panel boundaries. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-5816e633-1231-429e-b70a-28df0a3a6bc1.png"
+    },
+    {
+      "source": "../rust/texture-94.png",
+      "output": "texture-94.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET original mtl_furniture_metal_door01_rust flat texture. Industrial ventilation door: preserve both louvered vents, latch and frame in exact places. Chipped dark petroleum teal paint on graphite metal, pale silver scratches, existing rust retained. No new markings. Gritty PS2/Xbox-era cyberpunk game surface; retain original detail density and weathering, not smooth. Exact original UV layout and aspect ratio 128:256. Full image texture edge-to-edge, no border, no render, no scene, no objects added, no new panel boundaries. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-83bd58da-c8d7-4de4-b107-5669cbcd908f.png"
+    },
+    {
+      "source": "../rust/texture-95.png",
+      "output": "texture-95.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET original mtl_vehicle_truck flat texture. Vehicle texture atlas: every tiny panel/window/tire UV island stays exactly placed. Repaint ONLY existing white body panels petrol teal with dark graphite trims; retain rubber, glass and mechanical parts and baked dirt. Gritty PS2/Xbox-era cyberpunk game surface; retain original detail density and weathering, not smooth. Exact original UV layout and aspect ratio 256:128. Full image texture edge-to-edge, no border, no render, no scene, no objects added, no new panel boundaries. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-bb73e1c4-5a14-4719-a5f5-87c558d717c4.png"
+    },
+    {
+      "source": "../rust/texture-96.png",
+      "output": "texture-96.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET original mtl_rock_tan_boulder flat texture. Boulder mineral texture: preserve all grain, cuts and scratches, change beige rock to cool slate-grey polluted urban stone with muted blue-violet undertones. No panels, no metal, no symbols. Gritty PS2/Xbox-era cyberpunk game surface; retain original detail density and weathering, not smooth. Exact original UV layout and aspect ratio 256:256. Full image texture edge-to-edge, no border, no render, no scene, no objects added, no new panel boundaries. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-6defccfc-3052-49fc-9752-a1c8d295b381.png"
+    },
+    {
+      "source": "../rust/texture-97.png",
+      "output": "texture-97.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET original mtl_corrugated_metal_holes flat texture. Worn corrugated metal sheet: preserve every vertical rib and hole exactly. Faded dark teal coating with exposed charcoal and silver metal, rough rusty chips. No new seams or symbols. Gritty PS2/Xbox-era cyberpunk game surface; retain original detail density and weathering, not smooth. Exact original UV layout and aspect ratio 256:256. Full image texture edge-to-edge, no border, no render, no scene, no objects added, no new panel boundaries. Preserve existing transparent regions.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-07ef2223-a151-4531-8d30-9568bddad034.png"
+    },
+    {
+      "source": "../rust/texture-98.png",
+      "output": "texture-98.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET the supplied original flat surface texture. Existing glowing light-stick material texture: recolor orange glow to muted cyan with worn dark teal base. Retain all exact gradient boundaries, plastic edges and small bottom-left cap. No new object or icon. Gritty PS2/Xbox-era cyberpunk game surface, retain original detail density and baked wear. Exact original UV layout and aspect ratio 128:128. Full-frame edge-to-edge image, no margins or border, no perspective, no scene or action, no invented panel seams, no extra lettering. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-16cf0fcc-35d9-4456-91bf-220997c85d7f.png"
+    },
+    {
+      "source": "../rust/texture-99.png",
+      "output": "texture-99.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET the supplied original flat surface texture. Tiny pebbled foam packing material: graphite with blue-teal grains and worn dust. Keep entire fine original granular pattern, no panels or new shapes. Gritty PS2/Xbox-era cyberpunk game surface, retain original detail density and baked wear. Exact original UV layout and aspect ratio 128:128. Full-frame edge-to-edge image, no margins or border, no perspective, no scene or action, no invented panel seams, no extra lettering. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-e2f45e97-cae2-482a-81e4-b2e083a5f968.png"
+    },
+    {
+      "source": "../rust/texture-100.png",
+      "output": "texture-100.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET the supplied original flat surface texture. Flat rugged equipment case texture atlas. Preserve every latch, handle, panel, tiny printed insignia and all original UV shapes exactly. Color existing plastic panels weathered dark petroleum teal; existing hardware dark carbon/steel. Gritty PS2/Xbox-era cyberpunk game surface, retain original detail density and baked wear. Exact original UV layout and aspect ratio 256:128. Full-frame edge-to-edge image, no margins or border, no perspective, no scene or action, no invented panel seams, no extra lettering. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-486e748a-8487-46a0-8315-235d27ee2582.png"
+    },
+    {
+      "source": "../rust/texture-101.png",
+      "output": "texture-101.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET the supplied original flat surface texture. Flat mechanical metal component UV texture, top circular six-hole section, central curved trapezoid and lower strips with tiny markings. Recolor olive panels worn petroleum teal and dark graphite, preserve exact shape layout and original circular holes. No new objects. Gritty PS2/Xbox-era cyberpunk game surface, retain original detail density and baked wear. Exact original UV layout and aspect ratio 128:256. Full-frame edge-to-edge image, no margins or border, no perspective, no scene or action, no invented panel seams, no extra lettering. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-aa2fe130-76bf-4320-b3f5-8d6a46e83d58.png"
+    },
+    {
+      "source": "../rust/texture-102.png",
+      "output": "texture-102.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET the supplied original flat surface texture. Corrugated cargo container roof texture. Same shallow ribs and scratches, faded petrol teal coating, grey worn edges, muted rust. Preserve original rib rhythm and spacing. Gritty PS2/Xbox-era cyberpunk game surface, retain original detail density and baked wear. Exact original UV layout and aspect ratio 256:256. Full-frame edge-to-edge image, no margins or border, no perspective, no scene or action, no invented panel seams, no extra lettering. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-5c53ad9e-4806-4ef2-b97b-faf2c471f63f.png"
+    },
+    {
+      "source": "../rust/texture-103.png",
+      "output": "texture-103.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET supplied original flat texture. Very wide 8:1 horizontal metal trim strip. Existing plain scuffed green material becomes faded petrol teal, retain rust streaks and dark top/bottom edges. IMPORTANT preserve original 8:1 content shape across whole width; no borders, no added panels. Gritty PS2/Xbox-era cyberpunk game surface, retain original detail density and baked wear, rough muted palette. Exact original UV island positions and aspect ratio 256:32. Full-frame edge-to-edge image, no margins or border, no perspective, no scene or action, no invented panel seams or extra details. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-307b6076-7359-4df1-ba94-3184e7c26dcf.png",
+      "exportCrop": [
+        0,
+        189,
+        2172,
+        476
+      ]
+    },
+    {
+      "source": "../rust/texture-104.png",
+      "output": "texture-104.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET supplied original flat texture. Flat worn equipment-case material UV atlas. Existing handles/panels and dark worn areas stay exactly placed; faded petroleum teal coating and charcoal plastic, retain rough wear and scratches. Gritty PS2/Xbox-era cyberpunk game surface, retain original detail density and baked wear, rough muted palette. Exact original UV island positions and aspect ratio 256:128. Full-frame edge-to-edge image, no margins or border, no perspective, no scene or action, no invented panel seams or extra details. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-42504c9a-b9fd-4182-baa2-1fcb4a6228c0.png"
+    },
+    {
+      "source": "../rust/texture-105.png",
+      "output": "texture-105.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET supplied original flat texture. Damaged granular foam material texture. Cool dark graphite with muted blue-grey grains, rough pockmarked original surface, preserve grain pattern. No invented panels or objects. Gritty PS2/Xbox-era cyberpunk game surface, retain original detail density and baked wear, rough muted palette. Exact original UV island positions and aspect ratio 128:128. Full-frame edge-to-edge image, no margins or border, no perspective, no scene or action, no invented panel seams or extra details. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-f1a1f37f-790e-48b0-a447-2f190ff857f2.png"
+    },
+    {
+      "source": "../rust/texture-106.png",
+      "output": "texture-106.png",
+      "prompt": "Use case: stylized-concept. Create a flat square 256x256-style low-resolution game UV texture atlas for a harmless cyberpunk industrial SERVICE UNIT. Full image edge to edge, orthographic surface artwork, no scene or perspective. Exact layout: left half (x0 to132 of256) is a worn faded petrol-teal rectangular printed label, with black small text POWER MODULE / SERVICE UNIT centred around y90 and tiny maintenance instructions near bottom y220. Right upper area x145\u2013245,y2\u2013130 is a dark charcoal scratched metal rectangular panel with four screws and a round pale mechanical pressure gauge centred at x200,y64, diameter60. Right lower area x140\u2013245,y133\u2013235 is near-black unused atlas space; bottom right x245\u2013255,y230\u2013255 small brushed steel tab. Original PS2/Xbox industrial diffuse texture aesthetic: baked dirt, chipped faded paint, scuffs, subtle brown corrosion, restrained cyan markings. Keep rough detailed matte surfaces and readable atlas boundaries. Only benign service equipment graphics. Fully opaque, no border around the square, no new scene elements.",
+      "method": "built-in image_gen; new benign service-unit atlas generated to measured original UV layout, replacing original equipment label",
+      "generated": "exec-4ed53d25-2a74-4c38-aeef-733830f52145.png"
+    },
+    {
+      "source": "../rust/texture-107.png",
+      "output": "texture-107.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET supplied original flat texture. Plain fabric flag and small polygonal parts UV atlas. Existing light cloth becomes faded desaturated teal with charcoal grime and worn creases, smaller polygonal components graphite. Keep exact outlines and original detail, no emblem or new text. Gritty PS2/Xbox-era cyberpunk game surface, retain original detail density and baked wear, rough muted palette. Exact original UV island positions and aspect ratio 256:256. Full-frame edge-to-edge image, no margins or border, no perspective, no scene or action, no invented panel seams or extra details. Preserve existing transparent regions.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-1c9f670b-ef5c-4c06-8c3f-d5ca96f99f48.png"
+    },
+    {
+      "source": "../rust/texture-108.png",
+      "output": "texture-108.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET supplied original flat texture. Large hard plastic equipment case UV atlas. Recolor olive panel surfaces worn petrol teal and graphite hardware. Preserve every hinge, seam, handle, recessed panel and tiny scratch in exact original locations. Gritty PS2/Xbox-era cyberpunk game surface; rough worn material and baked detail. Exact original UV island positions and aspect ratio 256:256. Full-frame edge-to-edge image, no margins or border, no perspective, no scene, no invented panel seams. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-e7b49c9a-8686-48b1-9619-32a0daad4a2a.png"
+    },
+    {
+      "source": "../rust/texture-109.png",
+      "output": "texture-109.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET supplied original flat texture. Laptop UV atlas. Preserve all islands exactly: screen rectangle top-left, keyboard bottom-left, broad casing panel at right. Recolor white case worn charcoal/teal. Small muted cyan terminal text confined strictly within existing top-left screen; screen on right stays its existing material. No new islands or perspective. Gritty PS2/Xbox-era cyberpunk game surface; rough worn material and baked detail. Exact original UV island positions and aspect ratio 256:128. Full-frame edge-to-edge image, no margins or border, no perspective, no scene, no invented panel seams. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-616b1cfa-a89b-4596-b2d5-08ca3977ba8d.png"
+    },
+    {
+      "source": "../rust/texture-110.png",
+      "output": "texture-110.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET supplied original flat texture. Old flip-phone UV atlas. Retain every small button, side strip, keyboard, screen and island in same exact location. Existing worn silver housing charcoal and petrol teal. Existing screen illumination muted cyan, preserve original small UI placement. No extra circuitry or external parts. Gritty PS2/Xbox-era cyberpunk game surface; rough worn material and baked detail. Exact original UV island positions and aspect ratio 256:256. Full-frame edge-to-edge image, no margins or border, no perspective, no scene, no invented panel seams. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-93bccc92-0ad4-4f21-ad67-eea75ac5be83.png"
+    },
+    {
+      "source": "../rust/texture-111.png",
+      "output": "texture-111.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET supplied original flat texture. Large dirty equipment crate UV texture. Existing panel rectangles, vertical raised strips and dust placement unchanged; faded petrol teal surfaces, graphite edges, grey rough dust. No invented stencils. Gritty PS2/Xbox-era cyberpunk game surface; rough worn material and baked detail. Exact original UV island positions and aspect ratio 256:256. Full-frame edge-to-edge image, no margins or border, no perspective, no scene, no invented panel seams. Fully opaque.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-95c22361-61ed-40e2-b99d-b62bd55e8339.png"
+    },
+    {
+      "source": "../rust/texture-112.png",
+      "output": "texture-112.png",
+      "prompt": "Use case: style-transfer. EDIT TARGET supplied original flat texture. Scuffed crate surface with faded yellow existing lettering and scratches. Recolor yellow paint to faded muted amber on dark petrol teal; preserve exact wear and existing lettering placement, don't add new text or symbols. Gritty PS2/Xbox-era cyberpunk game surface; rough worn material and baked detail. Exact original UV island positions and aspect ratio 128:128. Full-frame edge-to-edge image, no margins or border, no perspective, no scene, no invented panel seams. Preserve existing transparent regions.",
+      "method": "built-in image_gen; individual edit from original texture",
+      "generated": "exec-37119771-7dc0-4692-99f4-ee5a988686d0.png"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "shatter-duel",
+  "version": "0.18.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "check": "node --check dist/game.js && node --check server.mjs",
+    "test": "node test.mjs && node test-input.mjs && node test-air-sniper.mjs && node test-combat-map.mjs && node test-rendering.mjs && node test-movement.mjs && node test-traversal.mjs && node test-models.mjs",
+    "check:textures": "node validate-textures.mjs",
+    "start": "node server.mjs",
+    "test:server": "node test-server.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
