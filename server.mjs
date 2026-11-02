@@ -4,6 +4,7 @@ import { stat } from 'node:fs/promises';
 import { pipeline } from 'node:stream/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import {attachMultiplayer} from './multiplayer/server.mjs';
 
 const root = fileURLToPath(new URL('./dist/', import.meta.url));
 const types = {
@@ -46,7 +47,8 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(missing ? 404 : 500); res.end(missing ? 'Not found' : 'Server error');
   }
 });
+const stopMultiplayer = await attachMultiplayer(server);
 const port = Number(process.env.PORT || 8080);
 const host = process.env.HOST || '0.0.0.0';
 server.listen(port, host, () => console.log(`Listening on http://${host}:${server.address().port}`));
-for (const signal of ['SIGTERM', 'SIGINT']) process.on(signal, () => server.close(() => process.exit(0)));
+for (const signal of ['SIGTERM', 'SIGINT']) process.on(signal, () => { stopMultiplayer(); server.close(() => process.exit(0)); });

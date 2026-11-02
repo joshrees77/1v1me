@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#e9e8e2" />
-  <title>SHATTER — Practice FPS</title>
-  <meta name="description" content="A browser FPS with a practice bot, three weapons and an explorable map." />
+  <title>SHATTER — 1v1 FPS</title>
+  <meta name="description" content="Online 1v1 matches, private lobby links, bot practice and three weapons." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body data-theme="cyber">
@@ -14,14 +14,14 @@
   <div id="load-error" hidden><h1>Unable to load the game</h1><p id="error-detail">Please use a browser with WebGL enabled.</p><button onclick="location.reload()">Try again</button></div>
 
   <main id="lobby">
-    <header class="topbar"><a class="brand" href="./" aria-label="Shatter home"><span class="mark">S/</span> SHATTER<span class="brand-sub">PRACTICE FPS</span></a><div class="top-right"><span class="status-dot"></span> LOCAL PRACTICE <span class="version">BUILD 0.18</span><button class="icon-button" id="settings-open" aria-label="Open settings">⚙</button></div></header>
+    <header class="topbar"><a class="brand" href="./" aria-label="Shatter home"><span class="mark">S/</span> SHATTER<span class="brand-sub">1V1 FPS</span></a><div class="top-right"><span class="status-dot"></span> ONLINE + PRACTICE <span class="version">BUILD 0.19</span><button class="icon-button" id="settings-open" aria-label="Open settings">⚙</button></div></header>
     <section class="lobby-main">
-      <div class="eyebrow"><span></span> PRACTICE MODE</div>
-      <h1>PRACTICE<br><span>1V1</span></h1>
-      <p class="intro">Play against a bot or explore the map.<br>Select a weapon to start.</p>
-      <div class="mode"><div><span class="small-label">SELECTED MODE</span><strong>Practice duel <span class="tag">1 V 1</span></strong></div><span class="mode-icon">↗</span></div>
-      <div class="theme-picker" role="group" aria-label="Map visual theme"><button data-theme-choice="cyber" class="selected" aria-pressed="true">NEON RUST</button><button data-theme-choice="rust" aria-pressed="false">ORIGINAL RUST</button></div><button class="play" id="play">START PRACTICE <span>↗</span></button>
-      <button class="text-button" id="explore">EXPLORE MAP · NO DAMAGE <span>↗</span></button><div class="play-meta"><span class="status-dot"></span> YOU VS. BOT <span>FIRST TO 5</span></div>
+      <div class="eyebrow"><span></span> PLAY MODE</div>
+      <h1>PLAY<br><span>1V1</span></h1>
+      <p class="intro">Invite a friend, practice against a bot, or explore.</p>
+      <div class="mode"><div><span class="small-label">SELECTED MODE</span><strong>Rust <span class="tag">1 V 1</span></strong></div><span class="mode-icon">↗</span></div>
+      <div class="theme-picker" role="group" aria-label="Map visual theme"><button data-theme-choice="cyber" class="selected" aria-pressed="true">NEON RUST</button><button data-theme-choice="rust" aria-pressed="false">ORIGINAL RUST</button></div><button class="play" id="online-open">ONLINE 1V1 <span>↗</span></button><button class="secondary" id="play">START PRACTICE <span>↗</span></button>
+      <button class="text-button" id="explore">EXPLORE MAP · NO DAMAGE <span>↗</span></button><div class="play-meta"><span class="status-dot"></span> INVITE A FRIEND <span>2 PLAYERS</span></div>
       <button class="text-button" id="controls-open">⌨ &nbsp; CONTROLS <span>+</span></button>
     </section>
     <div class="map-label"><span class="small-label">MAP / 01</span><h2><b id="map-title">NEON RUST</b><span>↗</span></h2><p id="map-description">CYBERPUNK TEXTURES</p><div class="map-tags"><span>COMPACT</span><span>PS2 INSPIRED</span><span>REAL TIME</span></div></div>
@@ -30,11 +30,11 @@
       <button class="weapon-card" data-weapon="sniper"><span class="weapon-index">02</span><svg viewBox="0 0 180 60" aria-hidden="true"><path d="M12 29H143V25H173V33H104L98 43H86L90 33H60L42 44H12Z"/><path d="M65 17H109V24H65ZM74 24H80V29H74ZM95 24H101V29H95Z"/></svg><div><strong>SNIPER</strong><span>SCOPED RIFLE</span></div><span class="card-arrow">↗</span></button>
       <button class="weapon-card" data-weapon="knife"><span class="weapon-index">03</span><svg viewBox="0 0 160 60" aria-hidden="true"><path d="M16 32L61 27L63 22L71 24L142 11L123 32L73 37L72 43L65 42L63 36L18 42Z"/><path class="detail" d="M76 30L128 17"/></svg><div><strong>KNIFE</strong><span>STAB / THROW</span></div><span class="card-arrow">↗</span></button>
     </div></section>
-    <footer><span>LOCAL PRACTICE</span><span>HEADPHONES RECOMMENDED <span class="footer-cross">+</span> DESKTOP / MOUSE + KEYBOARD</span></footer>
+    <footer><span>ONLINE 1V1 / LOCAL PRACTICE</span><span>HEADPHONES RECOMMENDED <span class="footer-cross">+</span> DESKTOP / MOUSE + KEYBOARD</span></footer>
   </main>
 
   <section id="hud" hidden aria-label="Game heads-up display">
-    <div class="game-top"><div class="game-brand">S/ <span><b id="hud-map-name">NEON RUST</b><br><small>PRACTICE DUEL</small></span></div><div class="scoreboard"><div><small>YOU</small><strong id="player-score">0</strong></div><div class="round-info"><span id="round-number">ROUND 01</span><b id="timer">1:00</b><small>FIRST TO 5</small></div><div><small>BOT</small><strong id="bot-score">0</strong></div></div><button class="game-pause" id="pause-button">ESC <span>PAUSE</span></button></div>
+    <div class="game-top"><div class="game-brand">S/ <span><b id="hud-map-name">NEON RUST</b><br><small id="hud-mode">PRACTICE DUEL</small></span></div><div class="scoreboard"><div><small>YOU</small><strong id="player-score">0</strong></div><div class="round-info"><span id="round-number">ROUND 01</span><b id="timer">1:00</b><small id="win-target">FIRST TO 5</small></div><div><small id="opponent-label">BOT</small><strong id="bot-score">0</strong></div></div><span id="online-ping"></span><button class="game-pause" id="pause-button">ESC <span>PAUSE</span></button></div>
     <div id="traversal" hidden style="position:absolute;top:100px;left:24px;font:11px monospace;background:#252820dd;color:#f4e9ce;padding:9px 12px"></div><div id="crosshair"><i></i><i></i><i></i><i></i><b></b></div><div id="hit-marker">×</div><div id="scope"><div class="scope-lens"><i></i><b></b><span id="scope-status">4× / SETTLING</span></div></div>
     <div id="damage-flash"></div><div id="toast" role="status"></div>
     <div class="game-bottom"><div class="health-panel"><span class="small-label">HEALTH</span><div><span class="health-plus">+</span><strong id="health">100</strong><small>HP</small></div><div class="health-track"><i id="health-fill"></i></div></div><div class="hud-inventory"><span data-slot="shotgun"><kbd>1</kbd> SHOTGUN</span><span data-slot="sniper"><kbd>2</kbd> SNIPER</span><span data-slot="knife"><kbd>3</kbd> KNIFE</span></div><div class="ammo-panel"><span id="weapon-name" class="small-label">SHOTGUN</span><div><strong id="ammo">2</strong><span id="ammo-reserve">/ ∞</span></div><small id="weapon-hint">R RELOAD · RMB AIM</small></div></div>
@@ -42,9 +42,31 @@
   </section>
 
   <div class="modal-backdrop" id="settings-modal" hidden><section class="modal"><button class="modal-close" data-close aria-label="Close settings">×</button><span class="eyebrow">OPTIONS</span><h2>SETTINGS</h2><label for="sensitivity">Mouse sensitivity <output id="sensitivity-value">1.0</output></label><input id="sensitivity" type="range" min="0.3" max="2.5" step="0.1" value="1"><label for="difficulty">Bot difficulty</label><select id="difficulty"><option value="rookie">Easy</option><option value="duelist">Hard</option></select><label class="check-label"><input id="sound" type="checkbox" checked> Sound</label><p class="muted">Settings save automatically on this device.</p><button class="play compact" data-close>CLOSE <span>↗</span></button></section></div>
-  <div class="modal-backdrop" id="controls-modal" hidden><section class="modal"><button class="modal-close" data-close aria-label="Close controls">×</button><span class="eyebrow">HELP</span><h2>CONTROLS</h2><div class="control-list"><p><span>Move / sprint</span><b>W A S D / SHIFT</b></p><p><span>Look / jump</span><b>MOUSE / SPACE</b></p><p><span>Crouch / crawl under cover</span><b>HOLD C + WASD</b></p><p><span>Fire / stab</span><b>LEFT CLICK</b></p><p><span>Sniper aim / fire</span><b>HOLD / RELEASE RIGHT CLICK</b></p><p><span>Shotgun aim / knife throw</span><b>RIGHT CLICK</b></p><p><span>Switch weapon</span><b>1 2 3 / SCROLL</b></p><p><span>Reload / quick throw</span><b>R / Q</b></p><p><span>Reset position (explore)</span><b>T</b></p><p><span>Pause / release mouse</span><b>ESC</b></p></div><p class="muted"><b>Sniper:</b> Hold right-click (or Control-click on Mac) to scope. Release to fire, or left-click while scoped. Left-clicking prevents a second shot on release. Escape cancels the shot. The scope settles in 0.25 seconds. Headshots deal 100 damage for the first 0.65 seconds of each scope hold, then 95; body damage is 80, then 76. Hip-fire and movement reduce accuracy.</p><p class="muted"><b>Air scope:</b> Scoping with the sniper in the air stops movement for up to 0.6 seconds, once per jump or fall. Shots are accurate after the scope settles. You take 50% more damage while hovering. Releasing scope ends the hover; landing resets it.</p><p class="muted"><b>Shotgun:</b> Two shells. Pellet spread and damage falloff reduce effectiveness at range.</p><p class="muted"><b>Knife:</b> Left-click to stab. Right-click or Q to throw. Returns after 3 seconds.</p><p class="muted"><b>Movement:</b> Space to jump. Hold C to crouch; release to stand when there is room. Ladders cannot be climbed.</p><p class="muted"><b>Modes:</b> Practice is first to 5 rounds. At the time limit, higher health wins; equal health is a draw. Explore disables damage and the timer. Press T in Explore to reset your position.</p><button class="play compact" data-close>CLOSE <span>↗</span></button></section></div>
-  <div class="modal-backdrop" id="pause-modal" hidden><section class="modal"><span class="eyebrow">PAUSED</span><h2>GAME PAUSED</h2><p class="muted">The bot is also paused.</p><button class="play compact" id="resume">RESUME <span>↗</span></button><button class="secondary" id="pause-settings">SETTINGS</button><button class="text-button" id="leave">← RETURN TO LOBBY</button></section></div>
+  <div class="modal-backdrop" id="controls-modal" hidden><section class="modal"><button class="modal-close" data-close aria-label="Close controls">×</button><span class="eyebrow">HELP</span><h2>CONTROLS</h2><div class="control-list"><p><span>Move / sprint</span><b>W A S D / SHIFT</b></p><p><span>Look / jump</span><b>MOUSE / SPACE</b></p><p><span>Crouch / crawl under cover</span><b>HOLD C + WASD</b></p><p><span>Fire / stab</span><b>LEFT CLICK</b></p><p><span>Sniper aim / fire</span><b>HOLD / RELEASE RIGHT CLICK</b></p><p><span>Shotgun aim / knife throw</span><b>RIGHT CLICK</b></p><p><span>Switch weapon</span><b>1 2 3 / SCROLL</b></p><p><span>Reload / quick throw</span><b>R / Q</b></p><p><span>Reset position (explore)</span><b>T</b></p><p><span>Pause / release mouse</span><b>ESC</b></p></div><p class="muted"><b>Sniper:</b> Hold right-click (or Control-click on Mac) to scope. Release to fire, or left-click while scoped. Left-clicking prevents a second shot on release. Escape cancels the shot. The scope settles in 0.25 seconds. Headshots deal 100 damage for the first 0.65 seconds of each scope hold, then 95; body damage is 80, then 76. Hip-fire and movement reduce accuracy.</p><p class="muted"><b>Air scope:</b> Scoping with the sniper in the air stops movement for up to 0.6 seconds, once per jump or fall. Shots are accurate after the scope settles. You take 50% more damage while hovering. Releasing scope ends the hover; landing resets it.</p><p class="muted"><b>Shotgun:</b> Two shells. Pellet spread and damage falloff reduce effectiveness at range.</p><p class="muted"><b>Knife:</b> Left-click to stab. Right-click or Q to throw. Returns after 3 seconds.</p><p class="muted"><b>Movement:</b> Space to jump. Hold C to crouch; release to stand when there is room. Ladders cannot be climbed.</p><p class="muted"><b>Modes:</b> Practice is first to 5 rounds. At the time limit, higher health wins; equal health is a draw. Online matches use the host’s rules. Escape opens a menu without pausing an online match. Explore disables damage and the timer. Press T in Explore to reset your position.</p><button class="play compact" data-close>CLOSE <span>↗</span></button></section></div>
+  <div class="modal-backdrop" id="pause-modal" hidden><section class="modal"><span class="eyebrow">PAUSED</span><h2 id="pause-heading">GAME PAUSED</h2><p class="muted" id="pause-detail">The bot is also paused.</p><button class="play compact" id="resume">RESUME <span>↗</span></button><button class="secondary" id="pause-settings">SETTINGS</button><button class="text-button" id="leave">← RETURN TO LOBBY</button></section></div>
   <div class="modal-backdrop" id="result-modal" hidden><section class="modal result"><span class="eyebrow">MATCH COMPLETE</span><h2 id="result-title">RESULT</h2><div id="result-score">5 — 2</div><p class="muted" id="result-detail"></p><button class="play compact" id="rematch">PLAY AGAIN <span>↗</span></button><button class="text-button" id="result-leave">← RETURN TO LOBBY</button></section></div>
+
+  <div class="modal-backdrop" id="online-modal" hidden><section class="modal online-modal" aria-label="Online lobby">
+    <button class="modal-close" id="online-close" aria-label="Close online lobby">×</button>
+    <span class="eyebrow">ONLINE 1V1</span><h2 id="online-code-label">PLAY WITH A FRIEND</h2>
+    <div id="online-connect">
+      <label for="online-name">Your name</label><input id="online-name" maxlength="20" value="Player" autocomplete="nickname">
+      <button class="play compact" id="online-create">CREATE LOBBY <span>↗</span></button>
+      <div class="join-row"><input id="join-code" maxlength="10" placeholder="Invite code" aria-label="Invite code" autocomplete="off" spellcheck="false"><button class="secondary" id="online-join">JOIN</button></div>
+    </div>
+    <div id="online-room" hidden>
+      <div id="online-players" aria-live="polite"></div>
+      <div class="online-rules">
+        <label>First to <select id="rule-rounds" aria-label="Rounds to win"><option>1</option><option>3</option><option selected>5</option><option>10</option><option>15</option></select></label>
+        <label>Round time <select id="rule-time" aria-label="Round time"><option value="30">30 seconds</option><option value="60" selected>60 seconds</option><option value="90">90 seconds</option><option value="120">120 seconds</option><option value="180">180 seconds</option></select></label>
+        <label>Weapons <select id="rule-weapons" aria-label="Allowed weapons"><option value="all">All weapons</option><option value="sniper">Sniper only</option><option value="shotgun">Shotgun only</option><option value="knife">Knife only</option></select></label>
+      </div>
+      <label for="invite-link">Invite link</label><div class="join-row"><input id="invite-link" readonly><button class="secondary" id="invite-copy">COPY LINK</button></div>
+      <button class="secondary" id="online-ready">READY</button><button class="play compact" id="online-start" disabled>START MATCH <span>↗</span></button>
+      <button class="text-button" id="online-leave">← LEAVE LOBBY</button>
+    </div>
+    <p id="online-status" class="muted" role="status" aria-live="polite"></p>
+  </section></div>
   <script src="vendor/babylon.js"></script><script type="module" src="game.js"></script>
 </body>
 </html>

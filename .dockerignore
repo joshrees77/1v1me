@@ -1,6 +1,9 @@
 *
 !Dockerfile
 !package.json
+!package-lock.json
 !server.mjs
+!multiplayer/
+!multiplayer/**
 !dist/
 !dist/**

@@ -1,28 +1,47 @@
-# SHATTER — Practice FPS
+# SHATTER — Online 1v1 FPS
 
-A playable local-practice FPS demo: a lobby, the imported Rust map with low-resolution textures, a training opponent, and three weapons. This version does not provide online multiplayer.
+A browser FPS with invite-only two-player lobbies, host-controlled rules, bot practice, and an explorable Rust map. Build 0.19 adds online multiplayer to the Railway version.
+
+## Play with a friend
+
+1. Open the same deployed game address on both computers.
+2. Choose **Online 1v1**, enter your name, and **Create lobby**.
+3. The host selects rounds to win (1–15), round time (30–180 seconds), and all weapons or one weapon type.
+4. **Copy link** and send it to your friend. They enter their name and choose **Join**.
+5. Both players choose **Ready**. The host chooses **Start match**. Click **Enter match** to capture your mouse.
+6. First to the chosen score wins. At the time limit, higher health wins; equal health is a draw. The host can return both players to the lobby for a rematch.
+
+Escape opens the menu but **does not pause an online match**. Leaving or disconnecting returns the remaining player to the lobby and transfers host control if needed. Rejoin using the same link while that lobby still has a player. Empty lobbies are deleted. Links are unlisted, not password-protected: anyone with the link can take the second slot.
 
 ## Deploy on Railway
 
-1. In Railway, choose **New Project → Deploy from GitHub repo** and select this repository. Allow Railway access to this private repository if it is not listed.
-2. Keep the root directory at the repository root. Railway detects the included `Dockerfile`. No build command, dependency installation, database, volume or secret variables are needed.
-3. Set **Settings → Deploy → Healthcheck Path** to `/health`.
-4. Under **Settings → Networking**, choose **Generate Domain**. The server uses Railway's `PORT`; if a target port is requested, use the service's `PORT` value (8080 by default).
-5. Open the generated HTTPS address and share it with testers. Testers do not need GitHub access to use the deployed game.
+1. Choose **New Project → Deploy from GitHub repo** and select `joshrees77/1v1me`, branch `main`.
+2. Keep the root at the repository root. Railway detects the included `Dockerfile`, installs the pinned WebSocket dependency, and runs the Node server.
+3. Set **Settings → Deploy → Healthcheck Path** to `/health`. Allow at least 60 seconds for startup while the map collision and combat index load.
+4. Under **Settings → Networking**, **Generate Domain**, target port **8080** (or the service's `PORT`).
+5. Use **one replica**. Disable sleeping/serverless mode for active playtests. The HTTP game and WebSocket endpoint run on the same service and domain. No database, volumes or secrets are required.
+6. Share the generated HTTPS game address. Create invite links from that address; localhost links only work on the same computer.
 
-Each visitor gets an independent practice match against a bot. Hosting this build does not enable player-versus-player matches, shared lobbies or invite codes.
+Existing Railway services connected to `main` can redeploy the latest commit. The old static ChatGPT Site does not provide the Node multiplayer server; use the Railway domain for online matches.
 
-The container uses Node 24, runs as the non-root `node` user and serves only `dist/`. `HOST` defaults to `0.0.0.0` and `PORT` defaults to `8080`. `/health` returns HTTP 200. The map and vendor libraries are included; no separate asset upload is required. The gzip map is decompressed by the browser, so the server intentionally sends it without a `Content-Encoding` header.
+Rooms and scores are held in memory. A restart or deployment ends current lobbies. This is a friends-playtest MVP with a limit of 20 simultaneous rooms / 64 connections, not ranked matchmaking or persistent accounts. One process owns all rooms; horizontal scaling requires a shared room routing/persistence design.
 
-Useful checks: `npm run check`, `npm test`, `npm run test:server`.
+The container uses Node 24, runs as the non-root `node` user, and serves only `dist/`. `HOST` defaults to `0.0.0.0` and `PORT` to `8080`. `/health` returns 200 after map initialization succeeds. The map and engine assets are included. The gzip map is decompressed by the browser, so it is served without `Content-Encoding`.
 
 Railway references: [Dockerfiles](https://docs.railway.com/builds/dockerfiles), [health checks](https://docs.railway.com/deployments/healthchecks), [public networking](https://docs.railway.com/networking/public-networking).
 
-## Run
+## Run locally
 
-With Node.js installed, run `npm start`, then open http://localhost:8080 in a desktop browser. Click **Start practice** to capture the mouse. Escape pauses the entire simulation and releases the mouse.
+Install Node 22+ (Node 24 recommended), then run:
 
-If an embedded browser refuses mouse capture, the demo automatically enables click-and-drag look. A regular desktop browser with pointer-lock support provides the intended FPS controls.
+```sh
+npm ci
+npm start
+```
+
+Open http://localhost:8080 in a desktop browser. For a same-computer test, open an invite link in a second tab. A background tab may run at a reduced frame rate; two computers are better for testing movement. Bot practice and map exploration remain available offline after the assets load.
+
+If an embedded browser refuses mouse capture, click-and-drag look is available. A normal desktop browser with pointer-lock support is recommended.
 
 ## Controls
 
@@ -30,31 +49,42 @@ If an embedded browser refuses mouse capture, the demo automatically enables cli
 | --- | --- |
 | Move / sprint | WASD / Shift |
 | Look / jump | Mouse / Space |
-| Crouch / crawl | Hold C; move with WASD |
-| Fire or stab | Left click |
-| Sniper aim / fire | Hold right click / release right click; left click also fires while held |
-| Shotgun aim / throw equipped knife | Hold right click / right click |
-| Weapon selection | 1 shotgun, 2 sniper, 3 knife, or mouse wheel |
-| Reload | R |
-| Quick throw knife | Q |
-| Pause | Escape |
+| Crouch / crawl | Hold C |
+| Fire / stab | Left click |
+| Sniper scope / release shot | Hold / release right click (or Control-click on Mac) |
+| Shotgun aim / knife throw | Right click |
+| Weapon selection | 1 shotgun, 2 sniper, 3 knife / wheel |
+| Reload / quick throw | R / Q |
+| Menu / release mouse | Escape |
+| Reset position in Explore | T |
 
-The double-barrel shotgun holds 2 shells and fires 10 hitscan pellets per shot (14 damage per pellet, no headshot bonus). It reloads both barrels in 2.2 seconds. Pellet damage stays at 100% through 5 metres, drops along a quadratic curve to 28.75% at 15 metres and 5% at 25 metres, then tapers to zero at 40 metres. Spread further reduces actual damage at range. The hitscan sniper has 5 rounds. During the first 0.65 seconds after scoping it deals 80 body / 100 head damage; afterward, and during hip-fire, it deals 76 body / 95 head damage. Scoping immediately caps horizontal movement at 1.8 m/s (normal run: 6.5 m/s), including while sprint is held. The knife deals 65 melee damage and 100 thrown damage; a training knife returns after 3 seconds. Ammunition reserves are unlimited. First to five round wins takes the match. At 60 seconds, the player with higher health wins the round; equal health is a draw.
+Sniper alignment takes 0.25 seconds. Stationary scoped headshots deal 100 damage for the first 0.65 seconds of a scope hold, then 95 (body damage 80, then 76). Hip-fire and movement add spread. Scoping while airborne suspends movement for up to 0.6 seconds, once per jump/fall; hovering players take 50% extra damage. Landing restores hover. Right-click release captures scoped state before unscoping. A left-click shot prevents a duplicate release shot.
 
-## Implementation
+The shotgun has two shells, ten pellets, and strong range falloff. Knife stabs deal 65 damage within 2.7m; thrown knives are swept projectiles dealing 100 damage and return after 3 seconds. Weapon restrictions apply to quick throw as well as weapon selection.
 
-Sniper accuracy: hip-fire has a wide random shot cone (about 10° half-angle when stationary), with additional spread while moving or jumping. Movement also makes scoped shots inaccurate. The scope aligns during its first 0.25 seconds, including while moving. Once aligned, stopping restores full precision immediately; movement still adds spread while you are moving. Releasing aim, switching weapons or reloading resets scope alignment. The scope and HUD show when the shot is steady. Spread affects the actual hitscan ray and its tracer, not just the crosshair.
+## Multiplayer implementation
 
-- Babylon.js 9.33.0 is vendored in `dist/vendor/babylon.js` with its license; characters and weapons are procedural meshes. Rust is imported from the user-provided Blender scene; placed instances are baked by material and textures capped at 256px.
-- `dist/game.js` contains local movement, obstacle collision, hit tests, projectile physics, bot behavior, round flow, synthesized audio, and UI integration.
-- `dist/style.css` provides the lobby and HUD. Google Fonts is optional; system font fallbacks are included.
-- `server.mjs` serves the game assets on Railway or locally. It is not a multiplayer server.
-- Preferences save to browser localStorage. No accounts, telemetry, or external gameplay API are used.
-- `window.shatter.snapshot()` exposes read-only diagnostics for debugging.
+- `multiplayer/server.mjs`: same-origin WebSocket upgrade, heartbeat, payload/message limits, slow-client handling and fixed simulation ticks.
+- `multiplayer/rooms.mjs`: lobby ownership, ready state, rules, server-controlled movement, ammo, reloads, cooldowns, spread, hit validation, health, projectiles and scoring. Clients send controls, never accepted positions or damage claims.
+- `dist/online-motion.js`: shared 60 Hz Rapier movement. The browser predicts inputs, then restores authoritative snapshots and replays unacknowledged inputs.
+- `dist/multiplayer.js` and `dist/game.js`: invite UI, transport, input packets, hit feedback, 75ms opponent interpolation, remote weapon display and round/results UI. Server snapshots arrive at 20 Hz.
+- `multiplayer/world.mjs`: imports the same terrain and visible-map BVH, including transparent fence/grate holes. Online character hits use simplified head/body hitboxes aligned with the operator model. Hitscan target rewind is bounded to 200ms using measured connection latency; world cover remains authoritative. Thrown knives are simulated on the server.
+- The server rejects non-host rule/start requests, invalid inputs, stale/duplicate frames, unavailable weapons, excessive fire rates and client-supplied damage/positions. Competitive cheat resistance and high-latency tuning need further playtesting.
 
-## Next step
+## Verification
 
-Extract movement and weapon rules into a shared TypeScript simulation, replace local authority with Colyseus rooms, and integrate prediction, reconciliation, and lag compensation. This prototype uses Rapier character controllers against imported triangle geometry, hitscan guns, and a swept projectile knife. A network server is not implemented.
+```sh
+npm run check
+npm test
+npm run test:server
+npm run test:multiplayer
+```
+
+Multiplayer checks exercise two real WebSocket clients plus deterministic simulation: joining/full lobbies, host authority, readiness, movement prediction/reconciliation, jump/crouch/hover, sniper damage timing, shotgun falloff, knife projectile hits, map cover, reloads, round/match flow, rematches and disconnects. Input tests preserve right-click release firing and duplicate-shot prevention. Local browser QA covers the two-player lobby and arena flow; internet-latency playtesting is still needed after Railway deployment.
+
+## Earlier builds
+
+The notes below describe the original practice build and subsequent art/gameplay work. Online matches use the server rules described above.
 
 ## Rust traversal build (0.4)
 
