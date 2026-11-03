@@ -1,6 +1,6 @@
 {
   "name": "shatter-duel",
-  "version": "0.19.0",
+  "version": "0.20.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "check:textures": "node validate-textures.mjs",
     "start": "node server.mjs",
     "test:server": "node test-server.mjs",
-    "test:multiplayer": "node test-multiplayer.mjs && node test-multiplayer-input.mjs"
+    "test:multiplayer": "node test-multiplayer.mjs && node test-multiplayer-input.mjs && node test-presentation.mjs"
   },
   "engines": {
     "node": ">=22"

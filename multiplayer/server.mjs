@@ -19,7 +19,8 @@ export async function attachMultiplayer(server){
       try{rooms.receive(c,JSON.parse(data.toString()));}catch{ws.close(1007,'Invalid JSON');}
     });
     ws.on('pong',()=>{alive=true;c.rtt=Math.min(.4,(performance.now()-pingAt)/1000);});
-    const heartbeat=setInterval(()=>{if(!alive){ws.terminate();return;}alive=false;pingAt=performance.now();ws.ping();},5000);
+    const ping=()=>{if(!alive){ws.terminate();return;}alive=false;pingAt=performance.now();ws.ping();};
+    const heartbeat=setInterval(ping,2000);ping();
     ws.on('close',()=>{clearInterval(heartbeat);rooms.disconnect(c);});ws.on('error',()=>ws.terminate());
     c.send({type:'hello',version:1});
   });

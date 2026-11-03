@@ -7,7 +7,7 @@ const B=vendor.exports,engine=new B.NullEngine(),scene=new B.Scene(engine);
 const context=vm.createContext({B,scene,materials:{},WEAPONS:{shotgun:{},sniper:{},knife:{}},gunModels:{},spawnBot:{x:0,y:0,z:0},camera:new B.FreeCamera('test-camera',B.Vector3.Zero(),scene)});
 scene.metadata={shadow:{addShadowCaster(){}}};
 const source=readFileSync('dist/game.js','utf8');
-vm.runInContext('let botRoot,bot,gunRoot,shotgunBreech;'+source.slice(source.indexOf('function mat('),source.indexOf('function box('))+source.slice(source.indexOf('function modelProfile('),source.indexOf('function moveBody(')),context);
+vm.runInContext('let botRoot,bot,gunRoot,shotgunBreech,muzzleFlash;const weaponRigs={};'+source.slice(source.indexOf('function mat('),source.indexOf('function box('))+source.slice(source.indexOf('function modelProfile('),source.indexOf('function moveBody(')),context);
 const run=s=>vm.runInContext(s,context);
 run("mat('black','#111111');mat('white','#ffffff');mat('glow','#ee7755');buildBot();botRoot.position.set(0,0,0);buildGuns();");
 // Real geometry must be closed and face outwards, not disappear from one side.

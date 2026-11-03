@@ -13,7 +13,7 @@ export function validateInput(m){
   const i=m.input;
   if(!Number.isSafeInteger(m.seq)||m.seq<1||!i||![-1,0,1].includes(i.forward)||![-1,0,1].includes(i.side)||!Number.isFinite(i.yaw)||Math.abs(i.yaw)>1e7||!Number.isFinite(i.pitch)||Math.abs(i.pitch)>1.46||!WEAPONS[i.weapon])throw Error('Invalid input.');
   if(m.action&&!['fire','throw','reload'].includes(m.action))throw Error('Invalid action.');
-  return {seq:m.seq,action:m.action,input:{forward:i.forward,side:i.side,yaw:i.yaw,pitch:i.pitch,weapon:i.weapon,aim:i.aim===true,jump:i.jump===true,crouch:i.crouch===true,sprint:i.sprint===true}};
+  return {seq:m.seq,action:m.action,renderDelay:Number.isFinite(m.renderDelay)?Math.max(.06,Math.min(.15,m.renderDelay)):.085,input:{forward:i.forward,side:i.side,yaw:i.yaw,pitch:i.pitch,weapon:i.weapon,aim:i.aim===true,jump:i.jump===true,crouch:i.crouch===true,sprint:i.sprint===true}};
 }
 export class Rooms {
   constructor(world,{clock=()=>performance.now()/1000,random=Math.random}={}){this.world=world;this.clock=clock;this.random=random;this.rooms=new Map();this.clients=new Set();this.lastSnapshot=0;}
@@ -102,13 +102,22 @@ export class Rooms {
     if(!target.hp)this.finish(room,p,head?'Headshot':'Elimination');
   }
   targetAt(p,now,shooter){
-    // Bounded rewind compensates transit and the opponent interpolation buffer.
-    const at=now-Math.min(.2,(shooter.client.rtt||0)/2+.06);
-    return p.history.findLast(h=>h.at<=at)?.motion||p.motion;
+    // The render clock includes snapshot downlink age; add the shot uplink too.
+    // Together these are one measured RTT, plus the client interpolation delay.
+    const at=now-Math.min(.25,(shooter.client.rtt||0)+(shooter.renderDelay||.085));
+    if(!p.history.length)return p.motion;
+    if(at<=p.history[0].at)return p.history[0].motion;
+    for(let n=1;n<p.history.length;n++){
+      const a=p.history[n-1],b=p.history[n];if(b.at<at)continue;
+      const t=(at-a.at)/(b.at-a.at||1),motion={...(t<.5?a.motion:b.motion)};
+      for(const k of ['x','y','z'])motion[k]=a.motion[k]+(b.motion[k]-a.motion[k])*t;
+      return motion;
+    }
+    return p.history.at(-1).motion;
   }
   action(room,p,kind,now){
     const s=p.motion,w=s.weapon,cfg=WEAPONS[w],target=room.players.find(x=>x!==p);
-    if(!target||p.hp<=0||now<p.nextFire||p.reloadEnd)return;
+    if(!target||p.hp<=0||(kind!=='reload'&&now<p.nextFire)||p.reloadEnd)return;
     if(kind==='reload'){
       if(w!=='knife'&&p.ammo[w]<cfg.capacity){p.reloadEnd=now+cfg.reload;s.aim=false;p.scopeAt=null;s.hover=0;}return;
     }
@@ -162,7 +171,7 @@ export class Rooms {
             if(!i.aim)p.scopeAt=null;
             const used=p.motion.hoverUsed;moveOnline(this.world.physics,p.actor,p.motion,i,p.spawn);
             if(!used&&p.motion.hoverUsed)p.hoverUntil=now+.6;
-            p.seq=packet.seq;p.lastInput=i;p.lastInputAt=now;
+            p.seq=packet.seq;p.renderDelay=packet.renderDelay;p.lastInput=i;p.lastInputAt=now;
             if(packet.action)this.action(room,p,packet.action,now);
           }
           // A stalled/backgrounded browser cannot freeze itself in midair.

@@ -1,3 +1,4 @@
+import {SnapshotBuffer,PredictedView,presentationTimers} from './dist/net-presentation.js';
 import {readFileSync}from'node:fs';import vm from'node:vm';import assert from'node:assert/strict';
 import {pickVisibleCombat}from'./dist/combat-raycast.js';
 import {createPhysics} from './dist/physics.js';
@@ -13,7 +14,7 @@ run(`settings.sound=false;engine=new B.NullEngine();scene=new B.Scene(engine);ca
 
 const bytes=readFileSync('dist/assets/rust/collision.bin');
 context.physicsTest=await createPhysics(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength));
-Object.assign(context,{STEP,moveOnline,restoreOnline});
+Object.assign(context,{STEP,moveOnline,restoreOnline,SnapshotBuffer,PredictedView,presentationTimers});
 run(`physics=physicsTest;spawnPlayer={x:-8,y:-6.1,z:4.8};playerActor=physics.actor(spawnPlayer);netSpawn=spawnPlayer;netMotion={...spawnPlayer,vx:0,vz:0,vy:0,hover:0,hoverUsed:false,weapon:'sniper',aim:false,yaw:0,pitch:0};onlineRoom={phase:'playing',rules:{rounds:5,weapons:'all'},deadline:performance.now()/1000+60};online={id:'self',ping:0,send:m=>sent.push(m)};netMatch=true;netEpoch=1;const sent=[];netLastSnapshot=performance.now()/1000;`);
 const down=(button=2)=>elements.get('arena').events.mousedown({button,clientX:640,clientY:360});
 const up=()=>listeners.get('mouseup')({button:2,buttons:0});
@@ -26,5 +27,7 @@ assert.equal(run('aiming'),false);assert.equal(run('ammo.sniper'),4,'local ammo 
 run('cooldown=0');up();ticks(1);assert.equal(run("sent.filter(m=>m.action==='fire').length"),1,'duplicate release suppressed');
 reset();down();ticks(20);down(0);ticks(1);run('cooldown=0');up();ticks(1);assert.equal(run("sent.filter(m=>m.action==='fire').length"),1,'left click prevents a second release shot');
 reset();down();ticks(20);run('pause();mode="playing"');up();ticks(1);assert.equal(run("sent.filter(m=>m.action==='fire').length"),0,'pause cancels armed shot');
+run(`exploring=true;netMatch=false;receiveOnline({type:'room',room:{code:'TEST',host:'self',now:performance.now()/1000,phase:'countdown',round:1,rules:{rounds:5,seconds:60,weapons:'all'},players:[{id:'self',name:'Host',ready:true},{id:'other',name:'Guest',ready:true}]}});`);
+assert.equal(run('exploring'),false,'online match clears Explore mode and its infinite timer');
 run('physics.world.free();engine.dispose();');
 console.log('PASS multiplayer mouse input: scoped release packet, ammo prediction, duplicate prevention, left-click suppression and pause cancellation.');

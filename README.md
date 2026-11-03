@@ -1,6 +1,19 @@
 # SHATTER — Online 1v1 FPS
 
-A browser FPS with invite-only two-player lobbies, host-controlled rules, bot practice, and an explorable Rust map. Build 0.19 adds online multiplayer to the Railway version.
+A browser FPS with invite-only two-player lobbies, host-controlled rules, bot practice, and an explorable Rust map. Build 0.20 improves weapon handling and multiplayer presentation.
+
+## Build 0.20: handling and network polish
+
+- Immediate local muzzle flash, tracer, recoil and sound; only server-confirmed hits award damage or show hit markers.
+- Server-timestamped opponent interpolation with a jitter-adaptive buffer, a monotonic playback clock and bounded catch-up after stalls. Positions hold when data runs out instead of extrapolating through cover.
+- Fixed-step local prediction now renders between simulation steps. Small reconciliation errors decay visually over roughly 100ms; large corrections snap. Collision state always corrects immediately.
+- Reload/cooldown presentation subtracts estimated snapshot transit time. Rewind includes snapshot downlink, shot uplink and the render buffer, capped at 250ms; target positions interpolate within recorded history.
+- Separate ADS, sway, movement, sprint, equip and recoil layers. Shotgun break/open/load/close stages, sniper magazine reload and bolt action; knife keeps its forward-only stab.
+- No damage, rate-of-fire, movement speed, hover duration or quickscope power-window changes. Reload can start during firing recovery, matching practice mode.
+
+Research used before implementation: [Glenn Fiedler: Snapshot Interpolation](https://gafferongames.com/post/snapshot_interpolation/), [Networked Physics](https://gafferongames.com/post/networked_physics_2004/), and [Epic: additive Aim Offsets](https://dev.epicgames.com/documentation/en-us/unreal-engine/aim-offset-in-unreal-engine). These inform the implementation; this is custom browser animation/networking, not MW2 code or extracted animations.
+
+Validation: deterministic 50/100/200ms RTT plus variable delivery/bursts at 30/60/144 FPS; correction continuity, moving-target rewind and timer aging; actual WebSocket lobby/match/disconnect tests; existing combat, scope release and hover tests. Browser checks cover weapon display/reloads and a two-client match. Real remote friends-playtests are still needed: WebSocket/TCP can stall behind retransmissions, and presentation smoothing does not remove physical latency. Use a Railway region close to both players. Diagnostics are available through `window.shatter.snapshot().network`.
 
 ## Play with a friend
 
@@ -67,7 +80,7 @@ The shotgun has two shells, ten pellets, and strong range falloff. Knife stabs d
 - `multiplayer/server.mjs`: same-origin WebSocket upgrade, heartbeat, payload/message limits, slow-client handling and fixed simulation ticks.
 - `multiplayer/rooms.mjs`: lobby ownership, ready state, rules, server-controlled movement, ammo, reloads, cooldowns, spread, hit validation, health, projectiles and scoring. Clients send controls, never accepted positions or damage claims.
 - `dist/online-motion.js`: shared 60 Hz Rapier movement. The browser predicts inputs, then restores authoritative snapshots and replays unacknowledged inputs.
-- `dist/multiplayer.js` and `dist/game.js`: invite UI, transport, input packets, hit feedback, 75ms opponent interpolation, remote weapon display and round/results UI. Server snapshots arrive at 20 Hz.
+- `dist/multiplayer.js` and `dist/game.js`: invite UI, transport, input packets, hit feedback, adaptive 75–150ms opponent interpolation on server timestamps, remote weapon display and round/results UI. Server snapshots arrive at 20 Hz.
 - `multiplayer/world.mjs`: imports the same terrain and visible-map BVH, including transparent fence/grate holes. Online character hits use simplified head/body hitboxes aligned with the operator model. Hitscan target rewind is bounded to 200ms using measured connection latency; world cover remains authoritative. Thrown knives are simulated on the server.
 - The server rejects non-host rule/start requests, invalid inputs, stale/duplicate frames, unavailable weapons, excessive fire rates and client-supplied damage/positions. Competitive cheat resistance and high-latency tuning need further playtesting.
 

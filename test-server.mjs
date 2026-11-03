@@ -14,7 +14,7 @@ const request=(path,method='GET')=>new Promise((resolve,reject)=>{
 });
 try {
  let r=await request('/health');assert.equal(r.status,200);assert.equal(JSON.parse(r.body).status,'ok');
- r=await request('/');assert.equal(r.status,200);assert.match(r.body.toString(),/BUILD 0.19/);
+ r=await request('/');assert.equal(r.status,200);assert.match(r.body.toString(),/BUILD 0.20/);
  r=await request('/game.js');assert.equal(r.status,200);assert.match(r.headers['content-type'],/javascript/);
  r=await request('/assets/rust/map.bin.gz');assert.equal(r.status,200);assert.equal(r.headers['content-encoding'],undefined);assert.deepEqual([...r.body.subarray(0,2)],[31,139]);assert.equal(r.body.length,Number(r.headers['content-length']));
  r=await request('/assets/rust/map.bin.gz','HEAD');assert.equal(r.status,200);assert.equal(r.body.length,0);assert.ok(Number(r.headers['content-length'])>1e6);
